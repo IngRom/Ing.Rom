@@ -1,0 +1,264 @@
+/*Reset de estilos generales*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Importo fuentes externas*/
+@font-face {
+    font-family: 'CHANTELLI ANTIQUA';
+    src: url(fonts/webfontkit-20230817-135614/chantelli_antiqua-webfont.woff2) format('woff2'),
+        url(fonts/Chantelli-Antiqua/Chantelli_Antiqua.ttf) format('ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body{
+    font-family: CHANTELLI ANTIQUA;
+}
+
+/*Estilos de Encabezado*/
+header{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 20px;
+    place-items: center;
+    background-color: rgb(0, 0, 0);
+    opacity: .93;
+    width: 100vw;
+    height: 15vh;
+}
+header #logo img{
+    width: 10w;
+    height: 10vh;
+}
+header #logo img:hover{
+    animation:rotate-vertical-center 0.9s;
+} 
+@keyframes rotate-vertical-center{
+    0%{
+        transform:rotateY(0)
+    }100%{
+        transform:rotateY(360deg)
+    }
+}
+header #menu ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, (10rem, 1fr));
+    grid-gap: 20px;
+    place-items: center;
+    list-style: none;
+}
+header #menu a{
+    text-transform: uppercase;
+    text-decoration: solid;
+    color: #fbdd34;
+    font-weight: bold;
+    transition: .5s;
+}
+header #menu a:hover{
+    animation:shadow-drop-top-bottom .8s linear both;
+    font-size: 20px;
+} 
+@keyframes shadow-drop-top-bottom{
+    0%{
+        box-shadow:0 0 0 0 transparent,0 0 0 0 transparent
+    }100%{
+        box-shadow:0 -12px 20px -12px #fbdd34,
+                0 12px 20px -12px #fbdd34;
+    }
+}
+
+/*Estilos de imagen de fondo*/
+.imgFondo{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    grid-template-rows: repeat(auto-fit, (2, 1fr));
+    grid-gap: 10px;
+    place-items: center;
+
+    background-image: url("imgs/fondo.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: contrast(120%);
+    width: 100vw;
+    height: 90vh;
+}
+.imgFondo #frase{
+    width: 70%;
+    height: 70%;
+}
+.imgFondo #frase #relleno{
+    width: 90%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 140px;
+    border-radius: 10px;
+    background-color: #000000;
+    opacity: .8;
+}
+.imgFondo #frase p{
+    color: #fbdd34;
+    font-size: 50px;
+    border-radius: 3px;
+    text-align: center;
+}
+.imgFondo #frase p:hover{
+    animation:tracking-in-expand 1s linear both;
+}
+@keyframes tracking-in-expand{
+    0%{
+        letter-spacing:-.1em;
+        opacity:0
+    }40%{
+        opacity:.6
+    }100%{
+        opacity:1
+    }
+}
+.imgFondo #imgIntro{
+    padding-left: 50px;
+}
+.imgFondo #imgIntro:hover{
+    animation:vibrate 1.5s linear both
+} 
+@keyframes vibrate{
+    0%{
+        transform:translate(0)
+    }20%{
+        transform:translate(-2px,2px)
+    }40%{
+        transform:translate(-2px,-2px)
+    }60%{
+        transform:translate(2px,2px)
+    }80%{
+        transform:translate(2px,-2px)
+    }100%{
+        transform:translate(0)
+    }
+}
+.imgFondo #imgIntro img{
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px, 0 4px 8px -1px, 0 8px 16px -2px, 
+    0 16px 32px -4px, 0 32px 64px -8px, 0 64px 128px -16px;
+}
+
+/*Siguiente Sección*/
+#presentacion{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 20px;
+    place-items: center;
+
+    width: 100vw;
+    height: 75vh;
+    background-color: rgba(0, 0, 0, 0.980);
+}
+#presentacion >  div{
+    display: grid;
+    place-content: center;
+    place-items: center;
+    color: aliceblue;
+    /*opacity: .8;  */
+}
+#presentacion img{
+    width: 105%;
+    height: 105%;
+    margin-left: 40px;
+    transition: .5s;
+}
+#presentacion img:hover{
+    width: 108%;
+    height: 108%;
+}
+#presentacion p{
+    font-size: 45px;
+    color: #fbdd34;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 75px;
+}
+#presentacion p:hover{
+    animation:tracking-in-expand 1s linear both;
+}
+#presentacion #frseDiv{
+    border-top: 2px solid #fbdd34;
+    border-bottom: 2px solid #fbdd34;
+    margin-right: 80px;
+}
+
+/*Sección de Productos...*/
+#productSection{
+    background-image: url(imgs/barraFondo.jpg);
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+#productSection #producTitle{
+    color: #fbdd34;
+    font-size: 4rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.185);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transition: .5s;
+}
+#productSection #producTitle:hover{
+    font-size: 4.5rem;
+}
+#productSection #productContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    place-items: center;
+    padding-top: 5rem;
+}
+#productSection #productContainer img{
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+}
+#productSection #productContainer img:hover{
+    animation:shake-left-right 1s linear both;
+}
+@keyframes shake-left-right{
+    0%,100%{
+        transform:rotate(0deg);
+        transform-origin:50% 50%
+    }10%{
+        transform:rotate(8deg)
+    }20%,40%,60%{
+        transform:rotate(-10deg)
+    }30%,50%,70%{
+        transform:rotate(10deg)
+    }80%{
+        transform:rotate(-8deg)
+    }90%{
+        transform:rotate(8deg)
+    }
+}
+
+/*Sección del Pie de página*/
+#contact {
+    background-color: black;
+    width: 100vw;
+    height: 50vh;
+    color: #fbdd34;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 4rem;
+    padding-top: 5rem;
+}
+#contact #general img{
+    background-color:#fbdd34;
+    width: 35px;
+    height: 35px;
+}

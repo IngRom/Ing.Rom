@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primoroso</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Libreria para hacer animaciones de scroll en css-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="imgs/Primoroso.jpg" alt="">
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#imgFondo">Principal</a></li>
+                <li><a href="#productSection">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="imgFondo">
+        <div id="frase">
+            <div id="relleno" data-aos="fade-down" data-aos-duration="2500">
+                <p>"Una experiencia deliciosa comienza aquí"</p>
+            </div>
+        </div>
+        <div id="imgIntro" data-aos="fade-up" data-aos-duration="2500">
+            <img src="imgs/galletaNutella.jpg" alt="Galleta de Nutella">
+        </div>
+    </section>
+    <section id="presentacion">
+        <div data-aos="zoom-in" data-aos-duration="2500">
+            <img src="imgs/chef.png" alt="Chef">
+        </div>
+        <div id="frseDiv" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2500">
+            <p>¡No te quedes con el antojo!</p>
+        </div>
+    </section>
+    <section id="productSection">
+        <div id="producTitle" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2500">
+            Algunos de nuestros Postres!...
+        </div>
+        <div id="productContainer">
+            <img src="imgs/galletaNuez.jpg" alt="Galleta de Nuez">
+            <img src="imgs/trufasGalletaOreo.jpg" alt="Trufa de Oreo">
+            <img src="imgs/cheesCakeFresa.jpg" alt="CheesCake de Fresa">
+        </div>
+    </section>
+    <footer id="contact">
+        <div id="general" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-offset="0">
+            <img src="imgs/icons8-mail.svg"> Mail: primoroso@primoroso.com <br>
+            <img src="imgs/icons8-whatsapp.svg"> Cel. 2223141583 <br>
+            <img src="imgs/location-39.svg"> Dirccion: Miguel Negrete  #17, <br> San Pablo Actipan, <br>
+                      Tepeaca, Pue. <br>
+            <img src="imgs/icons8-instagram.svg"> Instagram.
+        </div>
+    </footer>
+
+    <!--Script de libreria para animaciones al hacer scroll-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
